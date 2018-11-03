@@ -27,7 +27,7 @@ app.get('/servers/:id', function (req, res) {
 })
 
 app.put('/servers/:id', function (req, res) {
-  execFile('maemae',['./servers/' + req.params.id],(err, stdout, stderr) => {
+  execFile('touch',['./servers/' + req.params.id],(err, stdout, stderr) => {
     if (err) {
       res.status(404)
       res.end( "failed\n" )
